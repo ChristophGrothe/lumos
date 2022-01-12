@@ -1,0 +1,76 @@
+   /*general*/
+            
+   * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+body {
+    /*background: radial-gradient(black, silver, black);*/
+    background: black;
+    color: #fff;
+     display: grid;
+    grid-template: 90px repeat(29, 1fr) / repeat(12, 1fr);
+}
+
+header {
+grid-area: 1/1/2/13;
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+background-color: silver;
+justify-content: center;
+align-items: center; 
+}
+
+header li {
+list-style-type: none;
+margin: 0 20px;
+}
+
+.home-position {
+grid-area: 1/5/2/6;
+}
+
+.about-us-position {
+grid-area: 1/6/2/7;
+}
+
+.contact-position {
+grid-area: 1/7/2/8;
+}
+
+.references-position {
+grid-area: 1/8/2/9;
+}
+
+.main-logo {
+grid-area: 1/1/2/2;
+justify-self: end;
+}
+
+main {
+    grid-area: 2/1/29/13;
+    display: grid;
+    grid-template: 90px repeat(27, 1fr) / repeat(12, 1fr);
+}
+
+main img {
+  grid-area: 1/1/9/13;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

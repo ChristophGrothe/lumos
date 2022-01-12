@@ -1,4 +1,4 @@
-   /*general*/
+     /*general*/
             
    * {
     box-sizing: border-box;
@@ -56,21 +56,14 @@ main {
     grid-template: 90px repeat(27, 1fr) / repeat(12, 1fr);
 }
 
-main img {
+.latern {
   grid-area: 1/1/9/13;
   width: 100%;
+  position: relative;
+  bottom: 5%;
+  z-index: -10;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.girl {
+    grid-area: 6/1/11/6;
+}

@@ -1,9 +1,9 @@
-     /*general*/
-            
-   * {
+    /***GENERAL***/
+
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0rem;
+    padding: 0rem;
     font-family: Trebuchet MS, Arial, sans-serif;
 }
 
@@ -11,59 +11,332 @@ body {
     /*background: radial-gradient(black, silver, black);*/
     background: black;
     color: #fff;
-     display: grid;
-    grid-template: 90px repeat(29, 1fr) / repeat(12, 1fr);
 }
 
+
+/***Different Elements***/
+
+
+/***Header***/
+
 header {
-grid-area: 1/1/2/13;
-display: grid;
-grid-template-columns: repeat(12, 1fr);
-background-color: silver;
-justify-content: center;
-align-items: center; 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 1.25fr repeat(6, 1fr);
+    height: 7em;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 header li {
-list-style-type: none;
-margin: 0 20px;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: transparent;
+    background-image: linear-gradient(to right, #462523 0, #cb9551 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #c59b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .home-position {
-grid-area: 1/5/2/6;
+    grid-area: 1/5/2/6;
 }
 
 .about-us-position {
-grid-area: 1/6/2/7;
+    grid-area: 1/6/2/7;
 }
 
 .contact-position {
-grid-area: 1/7/2/8;
+    grid-area: 1/7/2/8;
 }
 
 .references-position {
-grid-area: 1/8/2/9;
+    grid-area: 1/8/2/9;
 }
 
 .main-logo {
-grid-area: 1/1/2/2;
-justify-self: end;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: 4em;
 }
 
+
+/***Main***/
+
 main {
-    grid-area: 2/1/29/13;
     display: grid;
-    grid-template: 90px repeat(27, 1fr) / repeat(12, 1fr);
+    grid-template: 36em 12em 36em 34em 26em 16em 14em 20em / repeat(12, 1fr);
 }
 
 .latern {
-  grid-area: 1/1/9/13;
-  width: 100%;
-  position: relative;
-  bottom: 5%;
-  z-index: -10;
+    grid-area: 1/1/2/13;
+    width: 100%;
+    border-radius: 2%;
+}
+
+.headlines {
+    grid-area: 1/1/2/10;
+    display: grid;
+    justify-content: end;
+    text-align: center;
+    position: relative;
+    right: 2em;
+    align-content: center;
+    bottom: 7em;
+}
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #ffd700, 0 0 0.6em #ffdd1f, 0 0 0.8em #ffdd1f, 0 0 1.0em #ffdd1f, 0 0 1.2em #ffdd1f;
+    }
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+h1 {
+    font-size: 500%;
+    color: #fff;
+     animation: flicker 1.5s infinite alternate; 
+}
+
+h1+h2 {
+    font-size: 150%;
+    color: white;
 }
 
 .girl {
-    grid-area: 6/1/11/6;
+    grid-area: 3/1/4/8;
+    border-radius: 5%;
+    margin-left: 2em;
+}
+
+.welcometext {
+    grid-area: 3/7/4/13;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    width: 50%;
+    margin-top: 10%;
+}
+
+.h2-position {
+    margin-top: 0.75em;
+    margin-bottom: 1em;
+    position: relative;
+    left: 25%;
+}
+
+.welcome {
+    color: transparent;
+    background-image: linear-gradient(to right, #462523 0, #cb9551 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #c59b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin: 0 0.2em 0 0.2em;
+}
+
+.intro {
+	padding: 0 5%;
+	text-align: center;
+	width: 130%;
+	font-weight: 500;
+	font-size: 125%;
+	font-family: "Garamond", Tahoma, serif;
+	margin-bottom: 35%;
+	margin-left: 6%;
+}
+
+.chris {
+    width: 25em;
+    grid-area: 4/9/5/13;
+    position: relative;
+    top: 3em;
+    right: 1em;
+    border-radius: 5%;
+}
+
+.h2-contact {
+    margin-bottom: 1em;
+}
+
+.contact1 {
+    grid-area: 4/3/5/7;
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+.email-field {
+    width: 12em;
+    display: grid;
+    justify-self: center;
+    margin-bottom: 1em;
+}
+
+
+/***Kind of website***/
+
+.size {
+    width: 170%;
+    border-radius: 5%;
+    margin-bottom: 5%;
+}
+
+.right_one_li {
+    width: 14.5%;
+}
+
+.kind {
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(to right, #462523 0, #cb9551 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #c59b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.kind_of {
+    grid-area: 5/2/6/12;
+}
+
+.right_one {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+    position: relative;
+    right: 5%;
+}
+
+.quiz {
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(to right, #462523 0, #cb9551 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #c59b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.question1 {
+    text-align: center;
+    margin: 3%;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.answers {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.answers li {
+	margin: 0.75%;
+	display: inline;
+	font-family: "Garamond", Tahoma, serif;
+	font-size: 1.25em;
+}
+
+.funnel {
+    grid-area: 6/2/7/12;
+}
+
+.own-website {
+    grid-area: 7/2/8/12;
+}
+
+.own {
+    text-align: center;
+    margin: 0 0 3%;
+    color: transparent;
+    background-image: linear-gradient(to right, #462523 0, #cb9551 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #c59b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.answers1 {
+    text-align: center;
+    margin-bottom: 2%;
+    display: inline;
+    font-family: "Garamond", Tahoma, serif;
+    font-size: 1.25em;
+}
+
+.title {
+    grid-area: 8/2/9/12;
+}
+
+.references {
+    text-align: center;
+    margin-bottom: 3em;
+    color: transparent;
+    background-image: linear-gradient(to right, #462523 0, #cb9551 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #c59b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.gallery-center {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.gallery {
+    width: 17.5%;
+}
+
+footer {
+    color: #747373;
+    background-color: #191919;
+    font-size: 0.85em;
+}
+
+footer section {
+    display: grid;
+    grid-template-columns: 30em 20em;
+    height: 12em;
+    align-items: center;
+}
+
+.Godrics-grid {
+    grid-column-start: 2;
+}
+
+.registration-grid {
+    grid-column-start: 3;
+}
+
+.contact {
+    margin-bottom: 0.5em;
+    color: transparent;
+    background-image: linear-gradient(to right, #462523 0, #cb9551 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #c59b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.subtitle2 {
+    width: 15em;
+    display: flex;
+    justify-content: center;
+}
+
+.signup {
+    margin-bottom: 1em;
+}
+
+label {
+    margin-bottom: 0.75em;
 }
